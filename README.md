@@ -1,4 +1,5 @@
 Armstrong Number App
+
 This is a full-stack web application to register users, verify Armstrong numbers, and manage them. It uses a Go (Gin) backend with MySQL and a React frontend with plain CSS.
 Setup Instructions
 1. Clone the Repository
