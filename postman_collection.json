@@ -1,0 +1,124 @@
+{
+  "info": {
+    "name": "Armstrong Number API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"test11@example.com\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/users",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["users"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get User",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/users/:id",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["users", ":id"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "123e4567-e89b-12d3-a456-426614174000"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Verify Armstrong Number",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"number\": 153}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/users/:id/verify",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["users", ":id", "verify"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "123e4567-e89b-12d3-a456-426614174000"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get User Armstrong Numbers",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/users/:id/armstrong",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["users", ":id", "armstrong"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "123e4567-e89b-12d3-a456-426614174000"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/all-users?page=1&limit=5",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["all-users"],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
